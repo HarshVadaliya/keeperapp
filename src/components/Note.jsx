@@ -1,4 +1,6 @@
 import React from "react";
+import DeleteIcon from "@material-ui/icons/Delete";
+import Fab from "@material-ui/core/Fab";
 
 function Note(props) {
   function handleClick() {
@@ -9,7 +11,9 @@ function Note(props) {
     <div className="note">
       <h1>{props.title}</h1>
       <p>{props.content}</p>
-      <button onClick={handleClick}>DELETE</button>
+      <Fab onClick={handleClick}>
+        <DeleteIcon />
+      </Fab>
     </div>
   );
 }
